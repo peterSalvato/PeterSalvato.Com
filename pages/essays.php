@@ -1,11 +1,21 @@
 <article>
-  <h1>Essays</h1>
-  <p>Brief writings and technical reflections on semantic tooling, UX systems, and remote cognitive infrastructure.</p>
+  <h1><?= $page_title ?></h1>
+  <p>Tools and frameworks built to scale cognition, structure authorship, and manage semantic complexity.</p>
+
   <ul>
     <?php
-    $essays = json_decode(file_get_contents(__DIR__ . '/../data/essays.json'), true);
-    foreach ($essays as $e) {
-      echo "<li><a href='/essays/{$e['slug']}.php'><strong>{$e['title']}</strong> – {$e['summary']}</a></li>";
+    $files = glob(__DIR__ . '/systems/*.php');
+
+    function extract_meta($file) {
+      $page_meta = [];
+      include $file;
+      return $page_meta;
+    }
+
+    foreach ($files as $file) {
+      $meta = extract_meta($file);
+      $slug = basename($file, '.php');
+      echo "<li><a href='/systems/$slug.php'><strong>{$meta['title']}</strong> – {$meta['summary']}</a></li>";
     }
     ?>
   </ul>

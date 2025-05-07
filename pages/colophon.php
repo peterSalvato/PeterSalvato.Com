@@ -1,3 +1,10 @@
+<?php
+$page_meta = [
+  "title" => "Colophon",
+  "summary" => "TODO: Add summary for Colophon.",
+  "type" => "page"
+];
+?>
 <article>
   <h1>Colophon</h1>
   <p>This site was hand-authored using PHP, semantic HTML, and a minimalist CSS scaffold. No CMS, no framework, no JavaScript dependencies.</p>

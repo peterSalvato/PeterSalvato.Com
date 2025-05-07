@@ -1,3 +1,10 @@
+<?php
+$page_meta = [
+  "title" => "Glossary",
+  "summary" => "TODO: Add summary for Glossary.",
+  "type" => "page"
+];
+?>
 <article>
   <h1>Glossary</h1>
   <dl>

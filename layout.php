@@ -1,31 +1,33 @@
-<?php include 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title><?= $site_title ?> – <?= $page_title ?></title>
-  <link rel="stylesheet" href="/assets/styles/styles.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><?= isset($page_title) ? $page_title . ' | Peter Salvato' : 'Peter Salvato' ?></title>
+  <link rel="stylesheet" href="/assets/styles/styles.css" />
 </head>
 <body>
   <header>
-    <div class="brand">
-      <a href="/"><strong>Peter Salvato</strong></a> <!-- Styled as a brand, not a heading -->
-      <span><strong>
-        - Enterprise UX<br />
-        - Front-End Systems<br />
-        - Remote Platform Leadership
-      </strong></span>
-    </div>
+    <a href="/" class="brand">
+      <span class="name">Peter Salvato</span>
+      <span class="tagline">UX Architecture · System Thinking · Platform Durability</span>
+    </a>
     <nav>
-      <?php foreach ($nav_items as $name => $link): ?>
-        <a href="<?= $link ?>"><?= $name ?></a>
-      <?php endforeach; ?>
+      <a href="/">Home</a>
+      <a href="/systems/">Systems</a>
+      <a href="/essays/">Essays</a>
+      <a href="/resume/">Résumé</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
     </nav>
   </header>
-  <main><?php include $page_content; ?></main>
-  <footer>
 
+  <main>
+    <?php if (!empty($page_content)) include $page_content; ?>
+  </main>
+
+  <footer>
+    <!-- Your footer structure -->
     <div class="footer-grid">
 
       <section class="footer-column">
@@ -56,18 +58,12 @@
       </section>
 
       <section class="footer-column footer-right">
-
-      <h2 class="footer-heading">© <?= date("Y") ?> <?= $site_title ?>.</h2>
-        <ul>
-          <li><a href="#">All systems authored.</a></li>
-          <li><a href="#">All rights reserved.</a></li>
-          <li><a href="#" class='codex'>//Æ::P3#|●.◁.●.⟩.●.▼.▶|//</a></li>
-        </ul>
-
+        <p>©2025 Peter Salvato</p>
+        <p>All systems authored.<br>All rights reserved.</p>
+        <p class="footer-codex">//Æ::P3#|●.◁.●.⟩.●.▼.▶|//</p>
       </section>
 
-    </div>
-
+      </div>
   </footer>
 </body>
 </html>

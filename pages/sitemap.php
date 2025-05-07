@@ -1,3 +1,10 @@
+<?php
+$page_meta = [
+  "title" => "Sitemap",
+  "summary" => "TODO: Add summary for Sitemap.",
+  "type" => "page"
+];
+?>
 <article>
   <h1>Sitemap</h1>
   <ul>
