@@ -1,3 +1,5 @@
-<h1>Staff+ Systems Architect</h1>
-<p>I design and scale platforms for documentation, internal tools, and interface logic.</p>
-<a href="/resume/index.php">Download Résumé</a>
+<article id="home" class="home">
+  <img src="assets/img/venn.svg" alt="Venn Diagram of Systems Architecture" />
+  <h1>Staff+ Systems Architect</h1>
+  <p>I design and scale platforms for<br/> documentation, internal tools, <br/>and interface logic.</p>
+</article>

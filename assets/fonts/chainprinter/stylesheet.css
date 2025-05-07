@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Chainprinter';
+    src: url('Chainprinter.eot');
+    src: url('Chainprinter.eot?#iefix') format('embedded-opentype'),
+        url('Chainprinter.woff2') format('woff2'),
+        url('Chainprinter.woff') format('woff'),
+        url('Chainprinter.ttf') format('truetype'),
+        url('Chainprinter.svg#Chainprinter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

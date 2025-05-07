@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Anton+SC&family=Bungee&family=Cutive+Mono&family=Special+Elite&family=Staatliches&family=VT323&display=swap');
+
+//VT323: CSS class
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//Special Elite: CSS class
+.special-elite-regular {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//Cutive Mono: CSS class
+.cutive-mono-regular {
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//Staatliches: CSS class
+.staatliches-regular {
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//Bungee: CSS class
+.bungee-regular {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//Anton: CSS class
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//Anton SC: CSS class
+.anton-sc-regular {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+    font-family: 'monospace', monospace;
+}
+body {
+    @extend .cutive-mono-regular;
+}
+h1, h2, h3, h4, h5, h6, strong {
+    @extend .staatliches-regular;
+}
+
+:root {
+    --maxwidth: 768px;
+}
+  
+html {
+    height: 100vh;
+    color: #444;
+    body {
+        font-weight: 700;
+        height: 100%;
+        display:grid;
+        grid-template-rows: 1fr auto;
+        
+        /////////////////
+
+        a {
+            text-decoration: none;
+            color: #444;
+            //padding: .25rem;
+            &:hover {
+                color: black;
+            }
+            strong {
+                display:block;
+            }
+        }
+        ul {
+            list-style:none;
+            margin:0;
+            padding:0;
+            li {
+                margin-bottom: .5rem;
+                padding: .5rem;
+            }
+        }
+        
+        header {
+            position: absolute;
+            top:1rem;
+            left:1rem;
+            z-index: 3;
+            /////////////
+            .brand {
+                > * {
+                    display:block;
+                }
+                > a {
+                    font-size: 3em;
+                    margin:0;
+                    padding:0;
+                    line-height: .9;
+                    text: {
+                        decoration: none;
+                    }
+                }
+                > span {
+                    //font-family:'Courier New', Courier, monospace
+                    line-height: 1.5rem;;
+                    font-size: 1.25em;
+                }
+            }
+            nav {
+                display: inline-block;
+                margin-top: .5rem;
+                a {
+                    display: block;
+                    padding: .25rem 0;
+                    &:hover {
+                    }
+                    &::before {
+                        content: '>';
+                        margin-right: .75rem;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        main {
+            z-index: 1;
+            padding-left: 3rem;
+            padding-top: 3rem;
+            ///////////////
+            article {
+                position: relative;
+                max-width: var(--maxwidth);
+                h1 {
+                    margin:0;
+                    padding:0;
+                }
+                &#home {
+                    padding-left: 550px;
+                    padding-top: 11rem;
+                    img {
+                        width: 500px;
+                        float: left;
+                        position: absolute;
+                        top: 0rem;
+                        left:5rem;
+                    }
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        line-height: 1.5rem;
+                        //width: 420px;
+                    }
+                }
+            }
+        }
+        footer {
+            background: #333;
+            color: #eee;
+            font-family: monospace;
+            padding: 2rem;
+            border-top: 1px solid #666;
+            
+            .footer-grid {
+                max-width: var(--maxwidth);
+                display: grid;
+                grid-template-columns: 1fr auto auto 1fr;
+                gap: 2rem;            }
+            
+            .footer-column {
+                font-size: 0.875rem;
+                &.footer-right {
+                    grid-column: 5 / 6; /* Push to the left by one column */
+                }
+            }
+            
+            .footer-heading {
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                margin-bottom: 0.5rem;
+                letter-spacing: 0.05em;
+            }
+            
+            .footer-column ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .footer-column li {
+                margin-bottom: 0.5rem;
+            }
+            
+            .footer-column a {
+                color: inherit;
+                text-decoration: none;
+            }
+            
+            .footer-column a:hover {
+                text-decoration: underline;
+            }
+            
+            .footer-codex {
+                margin-top: 1rem;
+                opacity: 0.7;
+                font-family: monospace;
+                word-break: break-word;
+            }
+        }
+    }   
+}
