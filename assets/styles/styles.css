@@ -144,15 +144,6 @@ html body main article h1 {
   margin: 0;
   padding: 0;
 }
-html body main article#home {
-  padding-top: 2rem;
-}
-html body main article#home img {
-  width: 400px;
-  position: relative;
-  margin-top: -4rem;
-  margin-left: -1rem;
-}
 html body main article#home p {
   margin: 0;
   padding: 0;
