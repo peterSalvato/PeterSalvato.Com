@@ -1,3 +1,4 @@
+<?php if (!isset($_extracting_meta)): ?>
 <?php
 $page_meta = [
   "title" => "Savepoint protocol",
@@ -9,3 +10,4 @@ $page_meta = [
   <h1>Savepoint Protocol</h1>
   <p>A structured documentation system for capturing authored decisions, tagged with semantic metadata.</p>
 </article>
+<?php endif; ?>

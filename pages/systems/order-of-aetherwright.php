@@ -1,3 +1,4 @@
+<?php if (!isset($_extracting_meta)): ?>
 <?php
 $page_meta = [
   "title" => "Order of aetherwright",
@@ -9,3 +10,4 @@ $page_meta = [
   <h1>The Order of the Ætherwright</h1>
   <p>A symbolic token system for classifying authored content across phases, domains, and cognitive states.</p>
 </article>
+<?php endif; ?>

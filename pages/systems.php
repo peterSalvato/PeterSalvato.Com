@@ -7,11 +7,18 @@
     $files = glob(__DIR__ . '/systems/*.php');
 
     function extract_meta($file) {
+      $_extracting_meta = true;
       $page_meta = [];
+      ob_start();
       include $file;
+      $output = ob_get_clean();
+    
+      if (trim($output) !== '') {
+        echo "<!-- WARNING: $file still renders visible output -->";
+      }
+    
       return $page_meta;
     }
-
     foreach ($files as $file) {
       $meta = extract_meta($file);
       $slug = basename($file, '.php');
