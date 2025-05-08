@@ -7,11 +7,11 @@
     $files = glob(__DIR__ . '/essays/*.php');
 
     function extract_meta($file) {
-      $page_meta = [];
-      include $file;
-      return $page_meta;
-    }
-
+      +  $_extracting_meta = true;       // ← add this line
+        $page_meta = [];
+        include $file;
+        return $page_meta;
+      }
     foreach ($files as $file) {
       $meta = extract_meta($file);
       $slug = basename($file, '.php');

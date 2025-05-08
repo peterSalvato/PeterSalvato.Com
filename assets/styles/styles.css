@@ -17,7 +17,7 @@
   font-style: normal;
 }
 
-.staatliches-regular, h1, h2, h3, h4, h5, h6, strong {
+.staatliches-regular {
   font-family: "Staatliches", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -41,8 +41,21 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Chainprinter";
+  src: url("../fonts/chainprinter/Chainprinter.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/chainprinter/Chainprinter.eot?#iefix") format("embedded-opentype"), url("../fonts/chainprinter/Chainprinter.woff2") format("woff2"), url("../fonts/chainprinter/Chainprinter.woff") format("woff"), url("../fonts/chainprinter/Chainprinter.ttf") format("truetype"), url("../fonts/chainprinter/Chainprinter.svg#Chainprinter") format("svg"); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 html {
-  font-family: "monospace", monospace;
+  font-size: 16px;
+  font-family: "Chainprinter", "Arial", monospace;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-family: "Chainprinter", "Arial", monospace;
 }
 
 :root {
@@ -94,9 +107,16 @@ html body header .brand > a {
   line-height: 0.9;
   text-decoration: none;
 }
-html body header .brand > span {
+html body header .brand > span.name {
+  font-family: "Chainprinter", "Arial", monospace;
+  font-size: 2em;
+}
+html body header .brand > span.tagline {
   line-height: 1.5rem;
-  font-size: 1.25em;
+  font-family: "Courier New", Courier, monospace;
+}
+html body header .brand > span.tagline > span {
+  display: block;
 }
 html body header nav {
   display: inline-block;
@@ -113,8 +133,8 @@ html body header nav a::before {
 }
 html body main {
   z-index: 1;
-  padding-left: 3rem;
-  padding-top: 3rem;
+  padding-left: 11rem;
+  padding-top: 9rem;
 }
 html body main article {
   position: relative;
@@ -125,27 +145,28 @@ html body main article h1 {
   padding: 0;
 }
 html body main article#home {
-  padding-left: 550px;
-  padding-top: 11rem;
+  padding-top: 2rem;
 }
 html body main article#home img {
-  width: 500px;
-  float: left;
-  position: absolute;
-  top: 0rem;
-  left: 5rem;
+  width: 400px;
+  position: relative;
+  margin-top: -4rem;
+  margin-left: -1rem;
 }
 html body main article#home p {
   margin: 0;
   padding: 0;
   line-height: 1.5rem;
 }
+html body main article#home p > span {
+  display: block;
+}
 html body footer {
   background: #333;
   color: #eee;
-  font-family: monospace;
   padding: 2rem;
   border-top: 1px solid #666;
+  font-size: 0.7rem;
 }
 html body footer .footer-grid {
   max-width: var(--maxwidth);
@@ -153,15 +174,12 @@ html body footer .footer-grid {
   grid-template-columns: 1fr auto auto 1fr;
   gap: 2rem;
 }
-html body footer .footer-column {
-  font-size: 0.875rem;
-}
 html body footer .footer-column.footer-right {
   grid-column: 5/6; /* Push to the left by one column */
 }
 html body footer .footer-heading {
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   margin-bottom: 0.5rem;
   letter-spacing: 0.05em;
 }
@@ -181,7 +199,6 @@ html body footer .footer-column a:hover {
   text-decoration: underline;
 }
 html body footer .footer-codex {
-  margin-top: 1rem;
   opacity: 0.7;
   font-family: monospace;
   word-break: break-word;

@@ -10,7 +10,11 @@
   <header>
     <a href="/" class="brand">
       <span class="name">Peter Salvato</span>
-      <span class="tagline">UX Architecture · System Thinking · Platform Durability</span>
+      <span class="tagline">
+        <span data-system="">UX Architecture</span>
+        <span data-system="">System Thinking</span>
+        <span data-system="">Platform Durability</span>
+      </span>
     </a>
     <nav>
       <a href="/">Home</a>
@@ -33,18 +37,18 @@
       <section class="footer-column">
         <h2 class="footer-heading">Resources</h2>
         <ul>
-          <li><a href="/glossary.php">Glossary</a></li>
-          <li><a href="/sitemap.php">Sitemap</a></li>
-          <li><a href="/colophon.php">Colophon</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/sitemap/">Sitemap</a></li>
+          <li><a href="/colophon/">Colophon</a></li>
         </ul>
       </section>
 
       <section class="footer-column">
         <h2 class="footer-heading">Meta Links</h2>
         <ul>
-          <li><a href="/rss.xml">RSS Feed</a></li>
-          <li><a href="/license.php">License</a></li>
-          <li><a href="/search.php">Search</a></li>
+          <li><a href="/rss/">RSS Feed</a></li>
+          <li><a href="/license/">License</a></li>
+          <li><a href="/search/">Search</a></li>
         </ul>
       </section>
 
@@ -58,9 +62,12 @@
       </section>
 
       <section class="footer-column footer-right">
-        <p>©2025 Peter Salvato</p>
-        <p>All systems authored.<br>All rights reserved.</p>
-        <p class="footer-codex">//Æ::P3#|●.◁.●.⟩.●.▼.▶|//</p>
+        <h2 class="footer-heading">©2025 Peter Salvato</h2>
+        <ul>
+        <li>All systems authored.</li>
+        <li>All rights reserved.</li>
+        <li class="footer-codex">//Æ::P3#|●.◁.●.⟩.●.▼.▶|//</li>
+        </ul>
       </section>
 
       </div>
