@@ -1,4 +1,3 @@
-<?php if (!isset($_extracting_meta)): ?>
 <?php
 $page_meta = [
   "title" => "Remote systems thinking",
@@ -6,6 +5,7 @@ $page_meta = [
   "type" => "essay"
 ];
 ?>
+<?php if (!isset($_extracting_meta)): ?>
 <article>
   <h1>Remote Systems Thinking</h1>
   <p>Designing asynchronous systems that support autonomy, clarity, and traceable collaboration.</p>

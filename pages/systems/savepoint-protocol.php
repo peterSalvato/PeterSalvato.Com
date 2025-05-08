@@ -1,4 +1,3 @@
-<?php if (!isset($_extracting_meta)): ?>
 <?php
 $page_meta = [
   "title" => "Savepoint protocol",
@@ -6,6 +5,7 @@ $page_meta = [
   "type" => "system"
 ];
 ?>
+<?php if (!isset($_extracting_meta)): ?>
 <article>
   <h1>Savepoint Protocol</h1>
   <p>A structured documentation system for capturing authored decisions, tagged with semantic metadata.</p>
