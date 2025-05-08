@@ -1,10 +1,10 @@
 <article>
   <h1><?= $page_title ?></h1>
-  <p>Tools and frameworks built to scale cognition, structure authorship, and manage semantic complexity.</p>
+  <p>Reflections and frameworks on semantic tooling, cognitive systems, authorship infrastructure, and remote UX practice.</p>
 
   <ul>
     <?php
-    $files = glob(__DIR__ . '/systems/*.php');
+    $files = glob(__DIR__ . '/essays/*.php');
 
     function extract_meta($file) {
       $page_meta = [];
@@ -15,8 +15,9 @@
     foreach ($files as $file) {
       $meta = extract_meta($file);
       $slug = basename($file, '.php');
-      echo "<li><a href='/systems/$slug.php'><strong>{$meta['title']}</strong> – {$meta['summary']}</a></li>";
+      echo "<li><a href='/essays/$slug.php'><strong>{$meta['title']}</strong> – {$meta['summary']}</a></li>";
     }
     ?>
   </ul>
 </article>
+
